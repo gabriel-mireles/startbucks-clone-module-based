@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { FindStoreIcon } from "../../find-store-icon/FindStoreIcon";
-import { LogoutButton } from "../../logout-button/LogoutButton";
-import { SignInButton } from "../../signin-button/SignInButton";
-import { SignUpButton } from "../../signup-button/SignUpButton";
-import { MenuLinkList } from "./MenuLinkList";
-import { normalMenuLinkList, categoriesMenuLinkList } from "../menuLinkList";
+import { FindStoreIcon } from "../../../find-store-icon/FindStoreIcon";
+import { LogoutButton } from "../../../logout-button/LogoutButton";
+import { StarbucksButton } from "../../../buttons/StarbucksButton";
+import { MenuLinkList } from "../menu-item/MenuLinkList";
+import { normalMenuLinkList, categoriesMenuLinkList } from "../../menuLinkList";
+import { SignInButton } from "../../../buttons/sign-in-button/SignInButton";
+import { SignUpButton } from "../../../buttons/sign-up-button/SignUpButton";
 
 const mainVariants = {
   open: {
@@ -60,10 +61,10 @@ export const Navigation = ({ toggle }) => {
 
           <motion.hr variants={secondaryVariants} />
           <motion.div
-            className="navigation__button"
+            className="sidebar__buttons"
             variants={secondaryVariants}
           >
-            {!user ? (
+            {!user.name ? (
               <>
                 <SignInButton />
                 <SignUpButton />

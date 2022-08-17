@@ -1,0 +1,35 @@
+.starbucksButton {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  outline: none;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: inherit;
+  display: inline-block;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3.25rem;
+  border-color: var(--contrast-color);
+
+  &__outline {
+    color: var(--text-color);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  &__full {
+    color: var(--bg-color);
+    background: var(--contrast-color);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}

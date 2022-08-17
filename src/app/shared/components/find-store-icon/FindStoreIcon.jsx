@@ -1,5 +1,12 @@
+import { Button } from "@mui/material";
+import { LocationOn } from "@mui/icons-material";
+import "./FindStoreIcon.scss";
+
 export const FindStoreIcon = () => {
   return (
-    <div>FindStoreIcon</div>
-  )
-}
+    <Button className="findStoreIcon">
+      <LocationOn />
+      Find a store
+    </Button>
+  );
+};

@@ -2,6 +2,9 @@
   --main-green: #008248;
   --title-color: black;
   --opacity-1: 0.87;
+  --text-color: rgba(0, 0, 0, var(--opacity-1));
+  --contrast-color: black;
+  --bg-color: white
 }
 
 body {
@@ -105,7 +108,7 @@ a > li {
   font-weight: 600;
 }
 
-.navigation__buttons {
+.sidebar__buttons {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;

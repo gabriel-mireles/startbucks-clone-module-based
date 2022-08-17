@@ -1,15 +1,15 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { SignInButton } from "../buttons/sign-in-button/SignInButton";
+import { SignUpButton } from "../buttons/sign-up-button/SignUpButton";
 import { FindStoreIcon } from "../find-store-icon/FindStoreIcon";
 import { LogoutButton } from "../logout-button/LogoutButton";
 import { Menu } from "../menu/components/Menu";
-import { SignInButton } from "../signin-button/SignInButton";
-import { SignUpButton } from "../signup-button/SignUpButton";
 import "./Header.scss";
-export const Header = ({menuPage}) => {
+export const Header = ({ menuPage }) => {
   const user = useSelector((state) => state.user);
   return (
-    <div className={`header ${menuPage && 'header__menuPage'}`}>
+    <div className={`header ${menuPage && "header__menuPage"}`}>
       <div className="header__left">
         <Link className="header__logo" to="home">
           <img
@@ -34,14 +34,16 @@ export const Header = ({menuPage}) => {
         <Menu />
         <FindStoreIcon />
 
-        {!user ? (
+        {!user.name ? (
           <>
-            <Link to="/account/signin"><SignInButton></SignInButton></Link>
-            <Link to="/account/create"><SignUpButton></SignUpButton></Link>
+            <SignInButton />
+            <SignUpButton />
           </>
-        ) : <div className="header__logout">
-          {menuPage ? <LogoutButton/> : <Link to="/menu">Order Now</Link>}
-        </div> }
+        ) : (
+          <div className="header__logout">
+            {menuPage ? <LogoutButton /> : <Link to="/menu">Order Now</Link>}
+          </div>
+        )}
       </div>
     </div>
   );

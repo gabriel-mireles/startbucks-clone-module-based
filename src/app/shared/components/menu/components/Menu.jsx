@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "../hooks/useDimension";
 import { MenuToggle } from "./MenuToggle";
-import { Navigation } from "./Navigation";
+import { Navigation } from "./sidebar/Sidebar";
 
 const sidebar = {
   open: (height = 1000) => ({

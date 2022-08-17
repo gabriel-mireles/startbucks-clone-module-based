@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import "./MenuLink.scss";
 import { ChevronLeftRounded, ChevronRightRounded } from "@mui/icons-material";
 
 const variants = {
@@ -20,7 +19,7 @@ const variants = {
   },
 };
 
-export const MenuLink = ({
+export const MenuItem = ({
   link,
   path,
   leftBackIcon,
