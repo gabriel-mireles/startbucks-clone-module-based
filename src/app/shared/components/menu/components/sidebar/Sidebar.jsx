@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { FindStoreIcon } from "../../../find-store-icon/FindStoreIcon";
-import { LogoutButton } from "../../../logout-button/LogoutButton";
-import { StarbucksButton } from "../../../buttons/StarbucksButton";
+import { LogoutButton } from "../../../buttons/logout-button/LogoutButton";
 import { MenuLinkList } from "../menu-item/MenuLinkList";
 import { normalMenuLinkList, categoriesMenuLinkList } from "../../menuLinkList";
 import { SignInButton } from "../../../buttons/sign-in-button/SignInButton";
@@ -35,7 +34,7 @@ const secondaryVariants = {
   },
 };
 
-export const Navigation = ({ toggle }) => {
+export const Sidebar = ({ toggle }) => {
   const [showMenuCategories, setShowMenuCategories] = useState(false);
   const user = useSelector((state) => state.user);
 

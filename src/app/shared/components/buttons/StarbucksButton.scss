@@ -5,7 +5,7 @@
   padding: 0.5rem 1rem;
   outline: none;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   font-family: inherit;
   display: inline-block;
@@ -16,12 +16,13 @@
   border-color: var(--contrast-color);
 
   &__outline {
-    color: var(--text-color);
+    color: inherit;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.06);
     }
   }
+
 
   &__full {
     color: var(--bg-color);
@@ -33,3 +34,4 @@
     }
   }
 }
+

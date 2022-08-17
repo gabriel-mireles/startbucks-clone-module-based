@@ -9,9 +9,15 @@ export const categoriesMenuLinkList = [
   },
   {
     link: "Rewards",
+    onClick(setState) {
+      setState(false, false);
+    },
   },
   {
     link: "GiftCards",
+    onClick(setState) {
+      setState(false, false);
+    },
   },
 ];
 
@@ -42,14 +48,14 @@ export const normalMenuLinkList = [
   {
     link: "Previous Orders",
     onClick(setState) {
-      setState(false, true);
+      setState(true, false);
     },
   },
 
   {
     link: "Favorite Products",
     onClick(setState) {
-      setState(false, true);
+      setState(true, false);
     },
   },
 ];

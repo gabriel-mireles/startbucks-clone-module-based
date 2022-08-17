@@ -30,7 +30,7 @@ export const MenuItem = ({
 }) => {
   return (
     <>
-      <Link to={path || "/"}>
+      <Link to={path || ""}>
         <motion.li
           style={{ width, display: "flex" }}
           onClick={onClick}

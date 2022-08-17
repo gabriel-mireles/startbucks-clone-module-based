@@ -4,7 +4,13 @@
   --opacity-1: 0.87;
   --text-color: rgba(0, 0, 0, var(--opacity-1));
   --contrast-color: black;
-  --bg-color: white
+  --bg-color: white;
+
+
+  // COLORS
+
+  --dark-green-color: #1e3932;
+  --light-pink: #fa91aa;
 }
 
 body {
@@ -143,3 +149,21 @@ a > li {
   align-items: center;
   cursor: pointer;
 }
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  html { font-size: 14px; } 
+}
+
+.closed {
+  width: 100px;
+  height: 100px;
+}
+

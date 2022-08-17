@@ -1,0 +1,28 @@
+.homePage {
+  &__top {
+    max-width: 1440px;
+    margin: 3.2rem auto;
+  }
+
+  &__promotions {
+    & > * {
+      margin: 3.2rem 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    &__top {
+      margin: 1rem 0;
+    }
+
+    &__promotions {
+      & > * {
+        margin: 2rem 0;
+      }
+    }
+  }
+
+
+}

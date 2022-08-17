@@ -1,0 +1,14 @@
+.heading {
+  text-align: center;
+  margin: 4rem 0;
+  text-transform: uppercase;
+  color: var(--dark-green-color);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}

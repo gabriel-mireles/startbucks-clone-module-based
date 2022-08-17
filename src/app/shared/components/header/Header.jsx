@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SignInButton } from "../buttons/sign-in-button/SignInButton";
 import { SignUpButton } from "../buttons/sign-up-button/SignUpButton";
 import { FindStoreIcon } from "../find-store-icon/FindStoreIcon";
-import { LogoutButton } from "../logout-button/LogoutButton";
+import { LogoutButton } from "../buttons/logout-button/LogoutButton";
 import { Menu } from "../menu/components/Menu";
 import "./Header.scss";
 export const Header = ({ menuPage }) => {
@@ -23,10 +23,10 @@ export const Header = ({ menuPage }) => {
         <Link to="menu" className="header__link">
           Menu
         </Link>
-        <Link to="rewards" className="header__link">
+        <Link to="/incoming" className="header__link">
           Rewards
         </Link>
-        <Link to="gift-cards" className="header__link">
+        <Link to="/incoming" className="header__link">
           Gift Cards
         </Link>
       </div>
