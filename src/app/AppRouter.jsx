@@ -2,8 +2,8 @@ import { Routes, Route } from "react-router-dom";
 
 import appRoutes from "./appRoutes";
 import routeTypes from "./shared/types/routeTypes";
-import { Header } from "./shared/components/Header";
-import { Footer } from "./shared/components/Footer";
+import { Header } from "./shared/components/header/Header";
+import { Footer } from "./shared/components/footer/Footer";
 import { PublicRoute } from "./public/components/PublicRoute";
 import { PrivateRoute } from "./private/components/PrivateRoute";
 

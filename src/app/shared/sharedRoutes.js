@@ -1,6 +1,6 @@
 import loadable from "@loadable/component";
 import routeTypes from "../shared/types/routeTypes";
-const HomePage = loadable(() => import("./pages/HomePage"), {
+const HomePage = loadable(() => import("./pages/home-page/HomePage"), {
   resolveComponent: (components) => components.HomePage,
 });
 
