@@ -14,8 +14,7 @@ export const HomePage = () => {
           ))}
         </div>
       </div>
-      <Heading heading="Be a part of us" />
-      <Divider />
+      <Divider/>
     </div>
   );
 };

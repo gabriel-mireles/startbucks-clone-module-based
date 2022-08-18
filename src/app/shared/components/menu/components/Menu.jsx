@@ -5,6 +5,7 @@ import { useDimensions } from "../hooks/useDimension";
 import { MenuToggle } from "./MenuToggle";
 import { Sidebar } from "./sidebar/Sidebar";
 import { useState } from "react";
+import useWindowDimensions from "app/shared/hooks/useWindowDimension";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -16,12 +17,12 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(30px at 75% 0px)",
     transition: {
-      delay: .2,
+      delay: 0.2,
       type: "spring",
       stiffness: 500,
-      damping: 40,
+      damping: 60,
     },
   },
 };
@@ -29,6 +30,11 @@ let counter = 1;
 let interval = null;
 
 export const Menu = () => {
+  const { width } = useWindowDimensions();
+  sidebar.closed.clipPath = `circle(30px at ${
+    width > 630 ? "75%" : width > 550 ? "60%" : "50%"
+  } 0px)`;
+
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [showWidth, setShowWidth] = useState(true);
   const containerRef = useRef(null);
@@ -41,10 +47,8 @@ export const Menu = () => {
     } else {
       interval = setInterval(() => {
         counter--;
-        console.log(counter);
         if (counter <= 0) {
           setShowWidth(true);
-          console.log(showWidth);
           clearTimeout(interval);
         }
       }, 1000);

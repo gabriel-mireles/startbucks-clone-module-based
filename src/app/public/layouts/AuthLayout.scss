@@ -1,0 +1,41 @@
+.authLayout {
+  &__title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.385;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    & > * {
+      width: 440px;
+    }
+  }
+
+  &__alert {
+    width: 30rem;
+    margin: 0 auto;
+  }
+
+  &__required {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-family: inherit;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .authLayout {
+    &__alert {
+      width: 20rem;
+      margin: 0 auto;
+    }
+  }
+}

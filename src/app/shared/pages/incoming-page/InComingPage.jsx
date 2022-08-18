@@ -46,6 +46,9 @@ export const InCommingPage = () => {
                   </div>
                 </Fade>
               </div>
+              <Fade  in timeout={3200}>
+              <p className="badJoke">For some reason people love counters, so why not?</p>
+              </Fade>
             </div>
           </Fade>
         </div>

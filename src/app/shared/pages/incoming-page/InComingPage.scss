@@ -72,3 +72,27 @@
     }
   }
 }
+
+.badJoke {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--dark-green-color);
+}
+
+@media (max-width: 841px) {
+  .badJoke {
+    display: none;
+  }
+}
+
+@media (max-height: 760px) {
+  .badJoke {
+    display: none;
+  }
+
+  .inComingPage {
+    &__container {
+      height: 75%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.starbucksInput {
+  position: relative;
+  &__errors {
+    margin-top: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: .875rem;
+
+    & > .MuiSvgIcon-root {
+      color: var(--danger-color);
+    }
+  }
+
+  &__field {
+    width: 100%;
+  }
+  &__cancelIcon {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    transform: translateY(100%);
+  }
+
+  &__visibilityIcon {
+    cursor: pointer;
+    color: grey;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    transform: translateY(80%);
+  }
+}

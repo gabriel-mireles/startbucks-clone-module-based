@@ -1,0 +1,44 @@
+.publicFooter {
+  margin: 4rem 0 2rem 0;
+
+  &__container {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    & > * {
+      color: var(--text-color);
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  .publicFooter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+  }
+  .publicFooter__container {
+    padding-left: 20px;
+  }
+  .publicFooter__container {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .publicFooter__right > a {
+    font-size: 14px;
+  }
+}

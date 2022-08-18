@@ -1,5 +1,11 @@
+.btn.container {
+  &:active {
+    transform: translateY(10%);
+    transition: all 0.3s ease;
+  }
+}
 .starbucksButton {
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   text-decoration: none;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -9,11 +15,16 @@
   font-size: 14px;
   font-family: inherit;
   display: inline-block;
-
   border-width: 1px;
   border-style: solid;
   border-radius: 3.25rem;
   border-color: var(--contrast-color);
+  cursor: pointer;
+
+  &:active {
+    transform: scale(95%);
+    transition: all 0.3s ease;
+  }
 
   &__outline {
     color: inherit;
@@ -22,7 +33,6 @@
       background-color: rgba(0, 0, 0, 0.06);
     }
   }
-
 
   &__full {
     color: var(--bg-color);
@@ -33,5 +43,11 @@
       border-color: rgba(0, 0, 0, 0.7);
     }
   }
-}
 
+  &.large {
+    font-size: 1.2rem;
+    padding: 1.1rem 1.5rem;
+    box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
+    border: none;
+  }
+}

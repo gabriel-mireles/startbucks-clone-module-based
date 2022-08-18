@@ -10,22 +10,24 @@ import { PrivateRoute } from "./private/components/PrivateRoute";
 export const AppRouter = () => {
   return (
     <>
-      <Header />
       <Routes>
         {appRoutes.map(({ component: Component, path, type }) => (
           <Route
             key={path}
             path={path}
             element={
-              <AppRoute type={type}>
-                <Component />
-              </AppRoute>
+              <>
+                <Header hasLinks={!(type === routeTypes.PUBLIC_ROUTE)} />
+                <AppRoute type={type}>
+                  <Component />
+                </AppRoute>
+                <Footer mode={type} />
+              </>
             }
           />
         ))}
         <Route path="testing" element={<div>testing</div>} />
       </Routes>
-      <Footer />
     </>
   );
 };

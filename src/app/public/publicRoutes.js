@@ -7,7 +7,7 @@ const LoginPage = loadable(() => import("./pages/LoginPage"), {
 const publicRoutes = [
   {
     path: "login",
-    component: LoginPage,
+    component: LoginPage
   },
 ];
 

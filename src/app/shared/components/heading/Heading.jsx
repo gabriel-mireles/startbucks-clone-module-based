@@ -1,5 +1,5 @@
 import './Heading.scss'
 
-export const Heading = ({ heading }) => {
-  return <div className="heading">{heading}</div>;
+export const Heading = ({ heading, color }) => {
+  return <div className="heading" style={color}>{heading}</div>;
 };

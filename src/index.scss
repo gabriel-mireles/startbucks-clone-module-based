@@ -5,6 +5,7 @@
   --text-color: rgba(0, 0, 0, var(--opacity-1));
   --contrast-color: black;
   --bg-color: white;
+  --danger-color: #e75b52;
 
 
   // COLORS
@@ -166,4 +167,9 @@ a > li {
   width: 100px;
   height: 100px;
 }
-
+.MuiListItem-button:hover {
+  background-color: rgba(23, 93, 131, 0.12) !important;
+}
+.MuiTouchRipple-rippleVisible {
+  color: white !important;
+}

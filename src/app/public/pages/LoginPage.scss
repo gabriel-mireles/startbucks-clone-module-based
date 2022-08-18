@@ -1,0 +1,23 @@
+.loginForm {
+  &__resetLinks {
+    margin-top: 20px;
+
+    & > a {
+      display: block;
+      margin-bottom: 1rem;
+      text-decoration: underline;
+      color: #00653e;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+  }
+
+  & > .starbucksInput {
+    padding-bottom: 1.5rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: right;
+  }
+}
