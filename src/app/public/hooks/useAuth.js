@@ -18,7 +18,6 @@ export const useAuth = () => {
       setIsLoading(true);
       setErrorMessage("");
       const userAuth = await logInWithEmailAndPassword(username, password);
-      console.log(userAuth);
       dispatch(
         login({
           name: userAuth.user.firstname + " " + userAuth.lastname,

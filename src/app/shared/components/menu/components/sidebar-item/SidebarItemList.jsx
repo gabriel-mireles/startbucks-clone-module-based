@@ -1,8 +1,8 @@
-import { MenuItem } from "./MenuItem";
+import { SidebarItem } from "./SidebarItem";
 
-export const MenuLinkList = ({ linkList, changeShowMenu }) => {
+export const SidebarItemList = ({ linkList, changeShowMenu }) => {
   return linkList.map((menuLink) => (
-    <MenuItem
+    <SidebarItem
       key={menuLink.link}
       link={menuLink.link}
       isMenu={menuLink.isMenu}

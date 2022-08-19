@@ -2,7 +2,7 @@ import * as React from "react";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "../hooks/useDimension";
-import { MenuToggle } from "./MenuToggle";
+import { SidebarMenuToggle } from "./SidebarMenuToggle";
 import { Sidebar } from "./sidebar/Sidebar";
 import { useState } from "react";
 import useWindowDimensions from "app/shared/hooks/useWindowDimension";
@@ -29,7 +29,7 @@ const sidebar = {
 let counter = 1;
 let interval = null;
 
-export const Menu = () => {
+export const SidebarMenu = () => {
   const { width } = useWindowDimensions();
   sidebar.closed.clipPath = `circle(30px at ${
     width > 630 ? "75%" : width > 550 ? "60%" : "50%"
@@ -73,7 +73,7 @@ export const Menu = () => {
     >
       <motion.div className="background" variants={sidebar} />
       <Sidebar toggle={() => toggleOpen()} />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <SidebarMenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };

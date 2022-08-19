@@ -1,5 +1,4 @@
 import { Divider } from "@mui/material";
-import { Heading } from "app/shared/components/heading/Heading";
 import { PromotedItem } from "app/shared/components/promoted-item/PromotedItem";
 import "./HomePage.scss";
 import { homePageFeatured } from "./homePageFeatured";

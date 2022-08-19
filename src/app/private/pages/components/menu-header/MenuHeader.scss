@@ -1,0 +1,39 @@
+.menuHeader {
+  background-color: #f7f7f7;
+  border: 1px solid #edebe9;
+  position: fixed;
+  width: 100%;
+  padding-left: 131px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbd9d7;
+  z-index: 2;
+
+  &__links {
+    display: flex;
+    gap: 25px;
+
+    & > a {
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 13px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__link--active {
+    border-bottom: 1px solid black;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuHeader {
+    position: inherit;
+  }
+}
+
+@media (max-width: 425px) {
+  .menuHeader {
+    display: none;
+  }
+}

@@ -10,10 +10,10 @@ const InComingPage = loadable(() => import("./pages/incoming-page/InComingPage")
 
 
 const sharedRoutes = [
-  {
-    path: "/",
-    component: HomePage,
-  },
+  // {
+  //   path: "/",
+  //   component: HomePage,
+  // },
   {
     path: "home",
     component: HomePage,

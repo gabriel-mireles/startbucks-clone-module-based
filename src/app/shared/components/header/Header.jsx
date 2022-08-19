@@ -4,7 +4,7 @@ import { SignInButton } from "../buttons/sign-in-button/SignInButton";
 import { SignUpButton } from "../buttons/sign-up-button/SignUpButton";
 import { FindStoreIcon } from "../find-store-icon/FindStoreIcon";
 import { LogoutButton } from "../buttons/logout-button/LogoutButton";
-import { Menu } from "../menu/components/Menu";
+import { SidebarMenu } from "../menu/components/SidebarMenu";
 import "./Header.scss";
 export const Header = ({ menuPage, hasLinks = true }) => {
   const user = useSelector((state) => state.user);
@@ -14,7 +14,7 @@ export const Header = ({ menuPage, hasLinks = true }) => {
   }
 
   return (
-    <div className={`header ${menuPage && "header__menuPage"}}`}>
+    <div className={`header ${menuPage && "header__menuPage"}`}>
       <div className="header__left">
         <Link className="header__logo" to="/home">
           <img
@@ -36,7 +36,7 @@ export const Header = ({ menuPage, hasLinks = true }) => {
         </Link>
       </div>
       <div className="header__right">
-        <Menu />
+        <SidebarMenu />
         <FindStoreIcon />
 
         {!user.user?.email ? (

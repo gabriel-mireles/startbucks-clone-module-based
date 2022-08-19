@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { FindStoreIcon } from "../../../find-store-icon/FindStoreIcon";
 import { LogoutButton } from "../../../buttons/logout-button/LogoutButton";
-import { MenuLinkList } from "../menu-item/MenuLinkList";
+import { SidebarItemList } from "../sidebar-item/SidebarItemList";
 import { normalMenuLinkList, categoriesMenuLinkList } from "../../menuLinkList";
 import { SignInButton } from "../../../buttons/sign-in-button/SignInButton";
 import { SignUpButton } from "../../../buttons/sign-up-button/SignUpButton";
@@ -46,14 +46,14 @@ export const Sidebar = ({ toggle }) => {
     <>
       {showMenuCategories ? (
         <motion.ul variants={mainVariants}>
-          <MenuLinkList
+          <SidebarItemList
             linkList={normalMenuLinkList}
             changeShowMenu={changeShowMenu}
           />
         </motion.ul>
       ) : (
         <motion.ul variants={mainVariants}>
-          <MenuLinkList
+          <SidebarItemList
             linkList={categoriesMenuLinkList}
             changeShowMenu={changeShowMenu}
           />

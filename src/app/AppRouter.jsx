@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import appRoutes from "./appRoutes";
 import routeTypes from "./shared/types/routeTypes";
@@ -48,7 +48,10 @@ export const AppRouter = () => {
               element={
                 <>
                   <AppRoute type={type} user={user}>
-                    <Header hasLinks={!(type === routeTypes.PUBLIC_ROUTE)} />
+                    <Header
+                      menuPage={path === "menu"}
+                      hasLinks={!(type === routeTypes.PUBLIC_ROUTE)}
+                    />
                     <Component />
                     <Footer mode={type} />
                   </AppRoute>
@@ -56,7 +59,7 @@ export const AppRouter = () => {
               }
             />
           ))}
-          <Route path="testing" element={<div>testing</div>} />
+          <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
       )}
     </>

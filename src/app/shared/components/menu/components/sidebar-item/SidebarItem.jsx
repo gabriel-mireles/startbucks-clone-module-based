@@ -19,7 +19,7 @@ const variants = {
   },
 };
 
-export const MenuItem = ({
+export const SidebarItem = ({
   link,
   path,
   leftBackIcon,
