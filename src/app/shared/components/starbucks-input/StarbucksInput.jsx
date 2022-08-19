@@ -1,14 +1,13 @@
 import { Cancel, Close } from "@mui/icons-material";
 import { Fade, TextField } from "@mui/material";
 import "./StarbucksInput.scss";
+
 const style = {
   "& .MuiInputBase-root": {
     borderRadius: ".7rem",
   },
 
 };
-
-
 
 export const StarbucksInput = ({
   errors,
@@ -41,7 +40,7 @@ export const StarbucksInput = ({
         <Fade in timeout={300}>
           <div className="starbucksInput__errors">
             <Close fontSize="small" />
-            <span>Enter a password.</span>
+            <span>Enter your {label?.replace('*', '')?.toLowerCase()}.</span>
             <Cancel fontSize="small" className="starbucksInput__cancelIcon" />
           </div>
         </Fade>

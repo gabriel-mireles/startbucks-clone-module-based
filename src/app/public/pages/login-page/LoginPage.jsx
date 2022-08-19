@@ -1,27 +1,43 @@
+import {  Grow } from "@mui/material";
+import { useAuth } from "app/public/hooks/useAuth";
 import { StarbucksButton } from "app/shared/components/buttons/StarbucksButton";
 import { Fade } from "app/shared/components/fade/Fade";
+import { InnerAlert } from "app/shared/components/inner-alert/InnerAlert";
 import { StarbucksInput } from "app/shared/components/starbucks-input/StarbucksInput";
 import { StarbucksPasswordInput } from "app/shared/components/starbucks-input/StarbucksPasswordInput";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { AuthLayout } from "../layouts/AuthLayout";
+import { AuthLayout } from "../../layouts/AuthLayout";
 import "./LoginPage.scss";
 
 export const LoginPage = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = ({ username, password }) => {
-    console.log(username, password);
-  };
+  const { isLoading, errorMessage, doLogin } = useAuth();
+  const onSubmit = ({ username, password }) => doLogin(username, password);
+
   return (
     <Fade>
       <AuthLayout title="Sign in or create an account">
-        <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+        <form className="loginPage" onSubmit={handleSubmit(onSubmit)}>
+          {errorMessage ? (
+            <Grow in unmountOnExit>
+              <div>
+                <InnerAlert
+                  type="error"
+                  title="Sign in unsuccessful."
+                  text={errorMessage}
+                />
+              </div>
+            </Grow>
+          ) : (
+            ""
+          )}
+
           <StarbucksInput
             name="username"
             label="* Username or email address"
@@ -38,11 +54,11 @@ export const LoginPage = () => {
             errors={errors}
           />
 
-          <div className="loginForm__resetLinks">
+          <div className="loginPage__resetLinks">
             <Link to="">Forgot your username?</Link>
             <Link to="">Forgot your password?</Link>
           </div>
-          <div className="loginForm__button">
+          <div className="loginPage__button">
             <StarbucksButton
               bgColor="var(--main-green)"
               type="full"
@@ -51,6 +67,7 @@ export const LoginPage = () => {
               text="Sign in"
               size="large"
               buttonBehavior="submit"
+              isLoading={isLoading}
             />
           </div>
         </form>

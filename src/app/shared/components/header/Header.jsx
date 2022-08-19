@@ -39,14 +39,14 @@ export const Header = ({ menuPage, hasLinks = true }) => {
         <Menu />
         <FindStoreIcon />
 
-        {!user.name ? (
+        {!user.user?.email ? (
           <>
             <SignInButton />
             <SignUpButton />
           </>
         ) : (
           <div className="header__logout">
-            {menuPage ? <LogoutButton /> : <Link to="/menu">Order Now</Link>}
+            <LogoutButton />
           </div>
         )}
       </div>

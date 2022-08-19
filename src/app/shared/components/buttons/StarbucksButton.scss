@@ -5,6 +5,7 @@
   }
 }
 .starbucksButton {
+  position: relative;
   transition: all 0.4s ease;
   text-decoration: none;
   text-align: center;
@@ -21,6 +22,7 @@
   border-color: var(--contrast-color);
   cursor: pointer;
 
+
   &:active {
     transform: scale(95%);
     transition: all 0.3s ease;
@@ -30,7 +32,7 @@
     color: inherit;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.06);
+      background-color: rgba(0, 0, 0, 0.1) !important;
     }
   }
 
@@ -49,5 +51,41 @@
     padding: 1.1rem 1.5rem;
     box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
     border: none;
+  }
+
+  &__loading.starbucksButton {
+    padding: 1.7rem 0.5rem;
+    transition: all .5s;
+
+    .starbucksButton__text {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: 4px solid transparent;
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: button-loading-spinner 1s ease infinite;
+    }
+  }
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
   }
 }

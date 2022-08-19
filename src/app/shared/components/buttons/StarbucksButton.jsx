@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./StarbucksButton.scss";
 
 export const StarbucksButton = ({
@@ -9,24 +9,25 @@ export const StarbucksButton = ({
   bold,
   bgColor,
   size,
-  buttonBehavior,
+  isLoading,
 }) => {
   const navigate = useNavigate();
   return (
     <button
       style={{
-        backgroundColor: bgColor,
+        background: bgColor ? bgColor: 'none',
         color,
         borderColor: color,
         fontWeight: bold ? "700" : "500",
       }}
-      className={`starbucksButton starbucksButton__${type} ${size}`}
+      className={`starbucksButton starbucksButton__${type} ${
+        isLoading ? "starbucksButton__loading" : ""
+      } ${size}`}
       onClick={() => {
-        to && navigate(to)
+        to && navigate(to);
       }}
-   
     >
-      {text}
+      <span className="starbucksButton__text"> {text}</span>
     </button>
   );
 };

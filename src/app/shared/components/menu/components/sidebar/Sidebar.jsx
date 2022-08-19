@@ -63,7 +63,7 @@ export const Sidebar = ({ toggle }) => {
             className="sidebar__buttons"
             variants={secondaryVariants}
           >
-            {!user.name ? (
+            {!user.user?.email ? (
               <>
                 <SignInButton />
                 <SignUpButton />

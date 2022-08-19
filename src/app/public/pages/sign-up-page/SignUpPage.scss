@@ -1,0 +1,19 @@
+.signUpPage {
+  &__section {
+    & > .starbucksInput {
+      padding-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+
+  &__button {
+    margin: 1rem;
+    display: flex;
+    justify-content: right;
+  }
+}

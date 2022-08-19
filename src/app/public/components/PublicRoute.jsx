@@ -1,13 +1,9 @@
 import { Navigate } from "react-router-dom";
-import { isLogged } from "../../isLogeed";
 
-export const PublicRoute = ({ children }) => {
-  const isLoggedIn = isLogged;
-
-  if (isLoggedIn) {
+export const PublicRoute = ({ children, user }) => {
+  if (user?.user?.email) {
     return <Navigate to="/home" />;
   }
 
   return children;
 };
-

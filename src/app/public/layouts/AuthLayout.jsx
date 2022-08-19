@@ -3,11 +3,17 @@ import { InnerAlert } from "app/shared/components/inner-alert/InnerAlert";
 import { StarbucksCard } from "app/shared/components/starbucks-card/StarbucksCard";
 import "./AuthLayout.scss";
 
-export const AuthLayout = ({ title, subtitle, children }) => {
+export const AuthLayout = ({ title, subtitle, text, children }) => {
   return (
     <div className="authLayout">
       <div className="authLayout__title">
         <p>{title}</p>
+      </div>
+      <div className="authLayout__subtitle">
+        <p>{subtitle}</p>
+      </div>
+      <div className="authLayout__text">
+        <p>{text}</p>
       </div>
       <div className="authLayout__box">
         <StarbucksCard>
@@ -18,7 +24,6 @@ export const AuthLayout = ({ title, subtitle, children }) => {
           {children}
         </StarbucksCard>
       </div>
-
       <div className="authLayout__alert">
         <InnerAlert
           title="JOIN STARBUCKS® REWARDS"

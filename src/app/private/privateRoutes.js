@@ -1,13 +1,13 @@
 import loadable from "@loadable/component";
 import routeTypes from "../shared/types/routeTypes";
-const PrivateTest = loadable(() => import("./pages/PrivateTest"), {
-  resolveComponent: (components) => components.PrivateTest,
+const MenuPage = loadable(() => import("./pages/MenuPage"), {
+  resolveComponent: (components) => components.MenuPage,
 });
 
 const privateRoutes = [
   {
-    path: "testprivate",
-    component: PrivateTest,
+    path: "menu",
+    component: MenuPage,
   },
 ];
 
